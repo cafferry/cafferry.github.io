@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		html,body{
+			margin: 0;
+			padding: 0;
+/*			background: url(img/bbgg.jpg) no-repeat;
+*/			color: yellow;
+			overflow: hidden;
+			font-size: 30px;
+		}
+		img{
+			width: 100%;
+		}
+/*		.point{
+			width: 100%;
+			height: 50px;*/
+			/*background: yellow;*/
+/*			position: fixed;
+			z-index: 2;
+			left: 0;
+			bottom: 0;
+		}*/
+/*		.point div{
+			float: left;
+			width: 12.5%;
+			height: 50px;
+	        line-height: 50px;
+	        text-align: center;
+	        font-size: 30px;
+	        background: yellow;
+	        color: #000;
+		}*/
+		.nextbox{
+			width: 416px;
+			height: 412px;
+			position: absolute;
+			left: 50%;
+			top:-412px;
+			margin-left: -208px;
+            border-radius: 20px;
+			background: url(img/next.png);
+			z-index: 5;
+			/*display: none;*/
+		}
+		.next{
+			width: 150px;
+			height: 60px;
+			position: absolute;
+			top: 279px;
+			left: 135px;
+			cursor: pointer;
+
+		}
+		.lbox{
+			width: 220px;
+			height: 66px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: none;
+		}
+		.lbox img{
+			width: 220px;
+			height: 66px;
+		}
+		.life{
+			width: 80px;
+			height: 66px;
+            line-height: 66px;
+            text-align: center;
+            font-size: 40px;
+            color:#000;
+            position: absolute;
+			left: 78px;
+			top: -3px;
+		}
+		.sbox{
+			width: 220px;
+			height: 66px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			display: none;
+		}
+		.sbox img{
+			width: 220px;
+			height: 66px;
+		}
+		.score{
+			width: 80px;
+			height: 66px;
+            line-height: 66px;
+            text-align: center;
+            font-size: 40px;
+            color:#000;
+            position: absolute;
+			left: 78px;
+			top: -3px;
+		}
+		.set{
+			width: 70px;
+			height: 70px;
+            border-radius: 50%;
+            position: absolute;
+			left: 5px;
+			bottom: 5px;
+			z-index: 5;
+			background: url(img/set.jpg);
+			cursor: pointer;
+			display: none;
+
+		}
+		.levelbox{
+			width: 523px;
+			height: 114px;
+			position: absolute;
+			left: 50%;
+			margin-left: -262px;
+			top: 0;
+			background: url(img/level.png);
+			display: none;
+
+		}
+		.levelbox .gq{
+			width: 70px;
+			height: 65px;
+			float: left;
+			margin-left: 283px;
+			margin-top: 0px;
+			font-style: "Elephant";
+			font-size: 60px;
+			line-height: 65px;
+			text-align: center;
+			color: #f1b91c;
+			font-weight: bold;
+
+		}
+		.resbox{
+			width: 140px;
+			height: 140px;
+			border-radius: 50%;
+			position: absolute;;
+			z-index: 10;
+			left: 50%;
+			top:50%;
+			margin-left: -70px;
+			margin-top: -70px;
+			display: none;
+
+		}
+		.res2{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			position: absolute;;
+			z-index: 10;
+			left: 10px;
+			bottom:83px;
+			display: none;
+			/*background: url(res.png);*/
+			/*transform: rotate(-10deg);*/
+
+		}
+		.res2 img{
+			width: 50px;
+			height: 50px;
+
+		}
+		.exit{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			position: absolute;;
+			z-index: 10;
+			left: 90px;
+			bottom:3px;
+			display: none;
+			/*background: url(exit.png);*/
+
+		}
+		.exit img{
+			width: 50px;
+			height: 50px;
+
+
+		}
+		.sm{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			position: absolute;;
+			z-index: 10;
+			left: 72px;
+			bottom:63px;
+			display: none;
+			/*background: url(exit.png);*/
+
+		}
+		.sm img{
+			width: 50px;
+			height: 50px;
+
+
+		}
+		.pause{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			position: absolute;;
+			right: 8px;
+			bottom:8px;
+			cursor: pointer;
+			/*display: none;*/
+			/*background: url(exit.png);*/
+
+		}
+		.ksbox{
+			width: 412px;
+			height: 462px;
+			background: url(img/start.png);
+			position: absolute;
+			z-index: 20;
+			top: 0;
+			left: 50%;
+			margin-left: -206px;
+		}
+		.ksbox .start{
+			width: 72px;
+			height: 72px;
+			border-radius: 50%;
+			position: absolute;
+			z-index: 20;
+			bottom: 87px;
+			left: 174px;
+			cursor: pointer;
+
+		}
+		.start2{
+			width: 72px;
+			height: 72px;
+			border-radius: 50%;
+			position: absolute;
+			z-index: 20;
+			bottom: 50%;
+			left: 50%;
+			margin-left: -36px;
+            margin-top: -36px;
+			cursor: pointer;
+			display: none;
+			background: url(img/start2.png);
+
+		}
+        .shuoming{
+			width: 416px;
+			height: 412px;
+			position: absolute;
+			left: 50%;
+			top:-412px;
+			margin-left: -208px;
+            border-radius: 20px;
+			background: url(img/shuoming.png);
+			z-index: 5;
+			/*display: none;*/
+        }
+        .xx{
+        	width: 73px;
+        	height: 71px;
+        	border-radius: 50%;
+        	position: absolute;
+        	right: 30px;
+        	top: 108px;
+        	cursor: pointer;
+        }
+
+
+	</style>
+</head>
+<body>
+	<div class="ksbox">
+		<div class="start"></div>
+	</div>
+	
+	<div class="resbox">
+		<img src="img/res.png" alt="" style="width:100%">
+	</div>
+	<div class="nextbox">
+		<div class="text"></div>
+		<div class="next"></div>
+	</div>
+	<div class="lbox">
+		<img src="img/life.png" alt="">
+		<div class="life">5</div>
+	</div>
+	<div class="sbox">
+		<img src="score.png" alt="">
+		<div class="score">0</div>
+	</div>
+
+	<img src="img/bg1.jpg" alt="">
+
+	<div class="set"></div>
+	<div class="res2"><img src="img/res.png" alt="" style="width:100%"></div>
+    <div class="exit"><img src="img/exit.png" alt="" style="width:100%"></div>
+	<div class="sm"><img src="img/sm.png" alt="" style="width:100%"></div>
+
+	<div class="levelbox">
+		<div class="gq">1</div>
+		<div class="pause"></div>
+	</div>
+
+	<div class="start2"></div>
+
+	<div class="shuoming">
+		<div class="xx"></div>
+	</div>
+
+
+
+	<div class="point">
+		<div class="nowscore"></div>
+	</div>
+	
+</body>
+<script src="js/animate.js"></script>
+<script type="text/javascript">
+    var xx=document.getElementsByClassName('xx')[0]
+    var shuoming=document.getElementsByClassName('shuoming')[0]
+	var sm=document.getElementsByClassName('sm')[0]
+	var start2=document.getElementsByClassName('start2')[0]
+    var levelbox=document.getElementsByClassName('levelbox')[0]
+    var lbox=document.getElementsByClassName('lbox')[0]
+    var sbox=document.getElementsByClassName('sbox')[0]
+    var ksbox=document.getElementsByClassName('ksbox')[0]
+    var start=document.getElementsByClassName('start')[0]
+    var pause=document.getElementsByClassName('pause')[0]
+    var  set=document.getElementsByClassName('set')[0]
+    var  res2=document.getElementsByClassName('res2')[0]
+    var  exit=document.getElementsByClassName('exit')[0]
+    var  resbox=document.getElementsByClassName('resbox')[0]
+    var nextbox=document.getElementsByClassName('nextbox')[0]
+    console.log(nextbox)
+    var nextd=document.getElementsByClassName('next')[0]
+    console.log(nextd)
+
+    var lifebox=document.getElementsByClassName('life')[0]
+    var scorebox=document.getElementsByClassName('score')[0]
+     var gqbox=document.getElementsByClassName('gq')[0]
+    var nowscorebox=document.getElementsByClassName('nowscore')[0]
+    var gq=1
+    var life=5
+    var score=0
+    var nowscore=0
+    var step=10
+    var speed=2;
+    var t
+
+    start.onclick=function(){
+    ksbox.style.display="none"
+    levelbox.style.display="block"
+    lbox.style.display="block"
+    sbox.style.display="block"
+    set.style.display="block"
+
+	var letterarr=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+	var number=3;
+	var currarr=[]		//保存当前获取的字母
+	getRand(letterarr,number)
+	var spanarr=[]		//保存当前存在的span元素
+	createLetter(currarr)
+	move(spanarr)
+	key(spanarr)
+
+
+
+
+
+    pause.onclick=function(){
+        clearInterval(t)
+		// resbox.style.display="block"
+		start2.style.display="block"
+    }
+
+	res2.onclick=function(){
+		location.reload()
+	}
+
+	exit.onclick=function(){
+	if 
+	(confirm("您确定要关闭本页吗？")){
+	window.opener=null;
+	window.open('','_self');
+	window.close();
+	}
+	else{}
+	}
+
+	sm.onclick=function(){
+		// shuoming.style.display="block"
+		animate(shuoming,{top:0},1000,Tween.Bounce.easeOut)
+			levelbox.style.display="none"
+	        lbox.style.display="none"
+	        sbox.style.display="none"
+	}
+
+
+		function getRand (arr,num) {	
+			for (var i = 0; i < num; i++) {
+				var letters=arr[Math.floor(Math.random()*arr.length)]
+				while(checkget(currarr,letters)){
+					letters=arr[Math.floor(Math.random()*arr.length)]
+				}
+				currarr.push(letters)	
+			};
+			return currarr
+		}
+		function checkget(arr,val){
+			for (var i = 0; i < arr.length; i++) {
+				if (arr[i]==val) {
+					return true;
+				};
+			};
+			return false;
+		}
+
+
+		function createLetter(arr){	
+			for (var i = 0; i < arr.length; i++) {
+				var spans=document.createElement("img")		
+				var cw=document.documentElement.clientWidth;			
+				lefts=Math.floor(Math.random()*(cw-400)+200)
+				spans.lefts=lefts
+				tops=Math.floor(Math.random()*100-30)
+				while(checkcreate(spanarr,spans)){		
+					lefts=Math.floor(Math.random()*(cw-400)+200)
+					spans.lefts=lefts
+				}
+				spans.style.cssText="position:absolute;left:"+lefts+"px;top:"+tops+"px;width:80px;height:80px"		
+				var n=arr[i]
+				spans.src="img/words/"+n+".png"
+				spans.className=n
+				document.body.appendChild(spans)		
+				spanarr.push(spans)		
+			};
+			return spanarr
+		}
+
+		function checkcreate(arr,value){
+			for (var i = 0; i < arr.length; i++) {
+				if (value.lefts>arr[i].lefts-100&&value.lefts<arr[i].lefts+100) {
+					return true		
+				};
+			};
+			return false
+		}
+
+		//移动事件
+		function move(arr){
+			
+			var ch=document.documentElement.clientHeight;
+			t=setInterval(down,60)
+			function down(){		
+				for (var i = 0; i < arr.length; i++) {
+					var tops=arr[i].offsetTop+speed		
+					arr[i].style.top=tops+"px";
+					if (tops>ch) {
+						document.body.removeChild(arr[i])
+						currarr.splice(i,1)
+						spanarr.splice(i,1) 	 	
+						getRand(letterarr,1)
+						createLetter(currarr[currarr.length-1])
+						life--
+						lifebox.innerHTML=life
+						if (life<0) {
+							life=0
+							lifebox.innerHTML=life
+							clearInterval(t)
+							resbox.style.display="block"
+							    levelbox.style.display="none"
+							    lbox.style.display="none"
+							    sbox.style.display="none"
+							    set.style.display="none"
+							// alert("GAME OVER")
+							
+						};
+
+					};
+				};
+			}
+			start2.onclick=function(){
+				start2.style.display="none"
+				t=setInterval(down,60)
+
+			}
+
+
+				var aa=true
+			    set.onclick=function(){
+
+			    	if (aa) {
+			    	 clearInterval(t)
+					res2.style.display="block"
+					exit.style.display="block"
+					sm.style.display="block"
+					aa=false
+
+				}else{
+					res2.style.display="none"
+					exit.style.display="none"
+					sm.style.display="none"
+					t=setInterval(down,60)
+					aa=true
+				}
+				xx.onclick=function(){
+			    	 // shuoming.style.display="none"
+			    	 animate(shuoming,{top:-412})
+
+			    	 res2.style.display="none"
+					 exit.style.display="none"
+					 sm.style.display="none"
+					 levelbox.style.display="block"
+	                 lbox.style.display="block"
+	                 sbox.style.display="block"
+			    	 t=setInterval(down,60)
+			    	 aa=true
+
+			    }
+
+
+	           }
+
+				              
+			    
+		}
+
+
+		resbox.onclick=function(){
+			// clearInterval(t)
+			 location.reload()
+		}
+
+		//键盘事件
+		function key(arr){
+			document.onkeydown=function(e){		
+				var e=e||window.event;
+				var letters=String.fromCharCode(e.keyCode)	
+				var name=document.getElementsByClassName(letters)[0]
+				for (var i = 0; i < arr.length; i++) {
+					if (arr[i].className==letters) {
+						document.body.removeChild(arr[i])
+						currarr.splice(i,1)
+						spanarr.splice(i,1) 	 	
+						getRand(letterarr,1)
+						createLetter(currarr[currarr.length-1])
+						score++
+						nowscore++
+						nowscorebox.innerHTML=nowscore
+						scorebox.innerHTML=score
+						console.log(nowscore%step)
+						if (nowscore%step==0) {
+							// alert("CONGRATULATION GO NEXT")
+							step+=5
+							nowscore=0
+							life++
+							lifebox.innerHTML=life
+							// nextbox.style.display="block";
+							// 动画函数 animate (obj,attrObj,dur,fun,callback)
+							animate(nextbox,{top:0},1000,Tween.Bounce.easeOut)
+							    levelbox.style.display="none"
+							    lbox.style.display="none"
+							    sbox.style.display="none"
+							    set.style.display="none"
+								nextd.onclick=function(){
+			                        clearInterval(t)
+			                        // nextbox.style.display="none";
+			                        animate(nextbox,{top:-412})
+			                            levelbox.style.display="block"
+									    lbox.style.display="block"
+									    sbox.style.display="block"
+									    set.style.display="block"
+									next(spanarr)
+							}
+							
+
+							
+						};
+					};
+				};
+			}
+		}
+
+		//下一关
+		function next(arr){
+			clearInterval(t)
+			for (var i = 0; i < arr.length; i++) {
+				document.body.removeChild(arr[i])
+			};
+			currarr=[]
+			spanarr=[]
+
+			speed+=1
+			if (speed>10) {
+				speed=10
+			};
+			number+=2
+			if (number>15) {
+				number=15
+			};
+			gq++
+			gqbox.innerHTML=gq
+
+			
+	
+			currarr=getRand(letterarr,number)
+			console.log(currarr)	
+			spanarr=createLetter(currarr)
+			move(spanarr)
+			key(spanarr)
+			
+     
+		}
+		}
+</script>
+</html>
