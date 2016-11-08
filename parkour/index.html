@@ -1,64 +1,65 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <script src="js/hitPix.js"></script>
-    <script src="js/game.js"></script>
-    <style>
-        html,body{
-            padding:0;margin:0;
-            width:100%;height:100%;
-            overflow: hidden;
-            background:url(img/tutobg.png);
-        }
-        canvas{
-            background-image: url(img/background-sheet0.png);
-            background-position: 0 0;
-            background-size: 1440px 800px;
-            background-repeat: repeat-x;
-        }
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>	
+		html,body{
+			width: 100%;height: 100%;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		canvas{
+			background:url(images/back.jpg) repeat-x;
+			background-size: contain;
+		}
+		.solobox{
+			width: 10%;
+			height: 120px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			line-height: 40px;
+			padding-left: 20px;
+		}
+		.solobox span{
+			color: red;
+		}
 
-    </style>
-    <script>
-        window.onload=function(){
-            var canvas=document.querySelector("canvas");
-            var cobj=canvas.getContext("2d");
-
-            window.onresize=function() {
-                canvas.width = document.documentElement.clientWidth;
-                canvas.height = document.documentElement.clientHeight;
-            }
-            window.onresize();
-//
-//            /*程序运行*/
-            var runImg=document.querySelectorAll(".run");
-            var jumpImg=document.querySelectorAll(".jump");
-            var hinderImg=document.querySelectorAll(".hinder");
-            var gameObj=new game(canvas,cobj,runImg,jumpImg,hinderImg);
-            gameObj.play();
-
-        }
-    </script>
+	</style>
+	<script src="js/hitPix.js"></script>
+	<script src="js/index.js"></script>
 </head>
 <body>
-<canvas>
-你的浏览器不支持canvas,请升级浏览器
-</canvas>
-<img src="imgs/person/run1.png" alt="" class="run" hidden>
-<img src="imgs/person/run2.png" alt="" class="run" hidden>
-<img src="imgs/person/run3.png" alt="" class="run" hidden>
+	<canvas>
+		您的浏览器版本过低
+	</canvas>
 
+	<img src="images/run-01.png" alt="" class="run" hidden>
+	<img src="images/run-02.png" alt="" class="run" hidden>
+	<img src="images/run-03.png" alt="" class="run" hidden>
+	<img src="images/run-04.png" alt="" class="run" hidden>
+	<img src="images/run-05.png" alt="" class="run" hidden>
+	<img src="images/run-06.png" alt="" class="run" hidden>
+	<img src="images/run-07.png" alt="" class="run" hidden>
+	<img src="images/run-08.png" alt="" class="run" hidden>
 
-<img src="imgs/person/jump1.png" alt="" class="jump" hidden>
+	<img src="images/jump-05.png" alt="" class="jump" hidden>
 
+	<img src="images/car1.png" alt="" class="car" hidden>
+	<img src="images/car2.png" alt="" class="car" hidden>
+	<img src="images/car3.png" alt="" class="car" hidden>
+	<img src="images/car4.png" alt="" class="car" hidden>
+	<img src="images/car5.png" alt="" class="car" hidden>
+	<img src="images/car7.png" alt="" class="car" hidden>
+	<img src="images/car8.png" alt="" class="car" hidden>
 
-<img src="imgs/hinder/boom.png" alt="" class="hinder" hidden>
-<img src="imgs/hinder/chick.png" alt="" class="hinder" hidden>
-<img src="imgs/hinder/egg.png" alt="" class="hinder" hidden>
-<img src="imgs/hinder/flow.png" alt="" class="hinder" hidden>
-<img src="imgs/hinder/grass.png" alt="" class="hinder" hidden>
-<img src="imgs/hinder/stone.png" alt="" class="hinder" hidden>
-<img src="imgs/hinder/tree.png" alt="" class="hinder" hidden>
+	<div class="solobox">
+		<div class="lifebox">生命值:&nbsp;<span id="life">4</span></div>
+		<div class="guankabox">关&nbsp;&nbsp;&nbsp;&nbsp;卡:&nbsp;<span id="guanka">1</span></div>
+		<div class="fenshubox">分数值:&nbsp;<span id="fenshu">0</span></div>		
+	</div> 
 </body>
+	<script src="js/game.js"></script>
 </html>
