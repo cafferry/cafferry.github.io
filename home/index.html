@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>袁飞的个人网站</title>
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/less.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/move.js"></script>
+	<script src="js/function.js"></script>
+	<script src="js/index.js"></script>
+</head>
+
+<body>
+<!-- 欢迎界面 -->
+<div class="huanying">
+	<div class="jinru">
+		<p>Welcome to my personal homepage</p>
+	</div>
+	<div class="jindu">
+		<div class="rangebox">
+			<div class="range"></div>
+		</div>
+		<p class="baifen">Loading...</p>
+	</div>
+</div>
+
+
+<!--<div class="loading" id="load"><img src="img/loading.GIF" alt=""></div>-->
+<!-- 初始动画 -->
+<div class="init_animate " id="init_animate">
+	<div class="case_wrap" id="case_wrap">
+		<ol class="caseMenu" id="case">
+			<li  style="width: 25%; z-index: 5; left: 0px; "><img src="img/init/li1.png" alt=""></li>
+			<li  style="width: 26.3%; z-index: 4; left: 15.42%; "><img src="img/init/li2.png" alt=""></li>
+			<li  style="width: 23.1%; z-index: 3; left: 38.6%; "><img src="img/init/li3.png" alt=""></li>
+			<li  style="width: 26%; z-index: 2; left: 58.33%; "><img src="img/init/li4.png" alt=""></li>
+			<li  style="width: 24.3%; z-index: 1; left: 75%; "><img src="img/init/li5.png" alt=""></li>
+		</ol>
+		<div class="wenzi">
+			<h2 id="title">“您看到的将不只是一个网站”</h2>
+			<div id="dax" class="dax"></div>
+		</div>
+
+	</div>
+</div>
+<!--导航-->
+<nav id="nav">
+	<div class="container">
+		<div class="row">
+			<div class="logo col-l-7 col-m-7 col-s-6"></div>
+			<ul id="menu" class="col-l-5 col-m-5 col-s-hide">
+						<li ><span style="background: #FFFF00;color: #000;">首页</span></li>
+						<li ><span>技能</span></li>
+						<li ><span>展示</span></li>
+						<li ><span>项目</span></li>
+						<li ><span>联系我</span></li>
+			</ul>
+			<div id="down_menu" class="col-l-hide col-m-hide col-s-6">
+				<div class="gang1"></div>
+				<div class="gang2"></div>
+			</div>
+			<ul id="menu2">
+				<li ><span>首页</span></li>
+				<li ><span>技能</span></li>
+				<li ><span>展示</span></li>
+				<li ><span>项目</span></li>
+				<li ><span>联系我</span></li>
+			</ul>
+		</div>
+	</div>
+
+</nav>
+<!--内容-->
+<div id="dowebok">
+	<!--第一屏-->
+	<div class="section sec1" id="sec1">
+			<!-- load your video here -->
+			<video autoplay="" loop="" muted="" poster="video/video-2.jpg" width="1920px" >
+				<source src="video/video-2.webm" type="video/webm" />
+				<source src="video/video-2.mp4" type="video/mp4" />
+				<source src="video/video-2.ogg" type="video/ogg" />
+			</video>
+			<div class="content">
+				<ul class="text_box">
+					<li class="head">
+						<img src="img/head.JPG" alt="">
+					</li>
+					<li class="motto">
+						<div >成功的道路其实并不拥挤，因为坚持的人不多</div>
+
+					</li>
+					<li class="text">
+						<div class="name">
+							我叫袁飞
+						</div>
+						<div class="job">
+							我是一名前端工程师
+						</div>
+					</li>
+				</ul>
+			</div>
+	</div>
+
+
+
+	<!--第二屏-->
+	<div class="section sec2">
+		<div class="inner">
+			<div class="outside" id="outside"></div>
+			<div class="round" id="round">
+						<span>
+							<img class="img1" src="img/test.png" alt="">
+							<img src="img/js.png" alt="">
+						</span>
+						<span>
+							<img class="img1" src="img/test.png" alt="">
+							<img src="img/less.png" alt="">
+						</span>
+						<span>
+							<img class="img1" src="img/test.png" alt="">
+							<img src="img/angular.png" alt="">
+						</span>
+						<span>
+							<img class="img1" src="img/test.png" alt="">
+							<img src="img/html5.png" alt="">
+						</span>
+						<span>
+							<img class="img1" src="img/test.png" alt="">
+							<img src="img/css3.png" alt="">
+						</span>
+						<span>
+							<img class="img1" src="img/test.png" alt="">
+							<img src="img/ajax.png" alt="">
+						</span>
+						<span>
+							<img class="img1" src="img/test.png" alt="">
+							<img src="img/jquery.png" alt="">
+						</span>
+			</div>
+			<div class="til">
+				<h3 class="til_en">My skills</h3>
+				<h2 class="til_zw"></h2>
+			</div>
+			<div class="inside" id="inside"></div>
+		</div>
+	</div>
+	<!--第三屏-->
+	<div class="section sec3">
+		<div class="sec3_til">
+			<h3></h3>
+			<p></p>
+		</div>
+		<div class="work1_wrap" id="box">
+			<div class="work_list1">
+				<ul class="list1_ul" id="list1_ul">
+					<li>
+						<a href="http://carsmart.cn/main.html" target="_blank">
+							<div class="li_img"><img src="img/show_img/car.png" alt=""></div>
+							<div class="li_txt">
+								<h6>北京车网互联</h6>
+								<span>时间：2016.6</span>
+								<!--<span>技术：H5</span>-->
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.gzmcg.com/" target="_blank">
+							<div class="li_img"><img src="img/show_img/gzjz.png" alt=""></div>
+							<div class="li_txt">
+								<h6>广州建筑集团有限公司</h6>
+								<span>时间：2015.11</span>
+								<!--<span>技术：H5</span>-->
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.omaonto.com/" target="_blank">
+							<div class="li_img"><img src="img/show_img/huanteng.png" alt=""></div>
+							<div class="li_txt">
+								<h6>广州欢腾鞋业有限公司</h6>
+								<span>时间：2015.9</span>
+								<!--<span>技术：H5</span>-->
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<div class="li_img"><img src="img/show_img/nick.png" alt=""></div>
+							<div class="li_txt">
+								<h6>nick</h6>
+								<span>时间：2016.8</span>
+								<!--<span>技术：H5</span>-->
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.fxoc.com.cn/" target="_blank">
+							<div class="li_img"><img src="img/show_img/nick.png" alt=""></div>
+							<div class="li_txt">
+								<h6>西古光通通信有限公司</h6>
+								<span>时间：2016.8</span>
+								<!--<span>技术：H5</span>-->
+							</div>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="scrollbar" id="hdt">
+				<span class="scrollbox" id="hk"></span>
+			</div>
+		</div>
+	</div>
+
+	<!--第四屏-->
+
+
+	<div class="section sec4">
+		<h3><img src="img/sec3_til.png" alt=""></h3>
+		<div class="inner container">
+			<ul class="work2_ul row" id="work2_ul">
+				<div class="work">
+
+					<div class="workinner">
+
+						<div class="workbox">
+							<!-- 照片传1：1 的 -->
+							<!-- 零碎 -->
+							<!-- 主体 -->
+
+							<ul class="workbase ww"><a href="https://cafferry.github.io/web_practice/apple/">
+								<img src="img/show_img/apple.png" alt="">
+								<div class="workmask"></div>
+								<div class="masktopest">
+									<div class="workworddown">
+										<p>apple官网
+										</p>
+									</div>
+								</div>
+								<div class="hovermask">
+									<div class="linkbox">
+										<span class="iconfont">&#xe600;</span>
+										<span class="iconfont">&#xe604;</span>
+										<span class="iconfont">&#xe605;</span>
+									</div>
+								</div>
+							</a>
+
+							</ul>
+							<ul class="workbase ww">
+								<img src="img/show_img/360shop.png" alt="">
+								<div class="workmask"></div>
+								<div class="masktopest">
+
+									<div class="workworddown">
+										<p>360移动商城
+										</p>
+									</div>
+								</div>
+								<div class="hovermask">
+									<div class="linkbox">
+										<span class="iconfont">&#xe600;</span>
+										<span class="iconfont">&#xe604;</span>
+										<span class="iconfont">&#xe605;</span>
+									</div>
+								</div>
+							</ul>
+							<ul class="workbase ww"><a href="https://cafferry.github.io/web_practice/baidu/">
+								<img src="./img/show_img/baidu.png" alt="">
+								<div class="workmask"></div>
+								<div class="masktopest">
+
+									<div class="workworddown">
+										<p>百度舆情主页
+										</p>
+									</div>
+								</div>
+								<div class="hovermask">
+									<div class="linkbox">
+										<span class="iconfont">&#xe600;</span>
+										<span class="iconfont">&#xe604;</span>
+										<span class="iconfont">&#xe605;</span>
+									</div>
+								</div>
+							</a>
+
+							</ul>
+							<ul class="workbase ww"><a href="https://cafferry.github.io/web_practice/163Email/">
+								<img src="img/show_img/email.png" alt="">
+								<div class="workmask"></div>
+								<div class="masktopest">
+
+									<div class="workworddown">
+										<p>网易邮箱
+										</p>
+									</div>
+								</div>
+								<div class="hovermask">
+									<div class="linkbox">
+										<span class="iconfont">&#xe600;</span>
+										<span class="iconfont">&#xe604;</span>
+										<span class="iconfont">&#xe605;</span>
+									</div>
+								</div>
+							</a>
+
+							</ul>
+							<ul class="workbase ww"><a href="https://cafferry.github.io/wordsgame/">
+							<img src="img/show_img/list.png" alt="">
+							<div class="workmask"></div>
+							<div class="masktopest">
+
+								<div class="workworddown">
+									<p>打字游戏
+									</p>
+								</div>
+							</div>
+							<div class="hovermask">
+								<div class="linkbox">
+									<span class="iconfont">&#xe600;</span>
+									<span class="iconfont">&#xe604;</span>
+									<span class="iconfont">&#xe605;</span>
+								</div>
+							</div>
+							</a>
+
+							</ul>
+							<ul class="workbase ww"><a href="https://cafferry.github.io/parkour/">
+								<img src="img/show_img/parhour.png" alt="">
+								<div class="workmask"></div>
+								<div class="masktopest">
+
+									<div class="workworddown">
+										<p>跑酷游戏
+										</p>
+									</div>
+								</div>
+								<div class="hovermask">
+									<div class="linkbox">
+										<span class="iconfont">&#xe600;</span>
+										<span class="iconfont">&#xe604;</span>
+										<span class="iconfont">&#xe605;</span>
+									</div>
+								</div>
+							</a>
+
+							</ul>
+							<ul class="workbase ww">
+								<a href="https://cafferry.github.io/ps/">
+								<img src="img/show_img/ps.png" alt="">
+								<div class="workmask"></div>
+								<div class="masktopest">
+
+									<div class="workworddown">
+										<p>画图工具
+										</p>
+									</div>
+								</div>
+								<div class="hovermask">
+									<div class="linkbox">
+										<span class="iconfont">&#xe600;</span>
+										<span class="iconfont">&#xe604;</span>
+										<span class="iconfont">&#xe605;</span>
+									</div>
+								</div>
+							</a>
+
+							</ul>
+							<ul class="workbase ww"><a href="https://cafferry.github.io/shopcar/">
+								<img src="img/show_img/shopcar.png" alt="">
+								<div class="workmask"></div>
+								<div class="masktopest">
+
+									<div class="workworddown">
+										<p>购物车
+										</p>
+									</div>
+								</div>
+								<div class="hovermask">
+									<div class="linkbox">
+										<span class="iconfont">&#xe600;</span>
+										<span class="iconfont">&#xe604;</span>
+										<span class="iconfont">&#xe605;</span>
+									</div>
+								</div>
+							</a>
+							</ul>
+							<ul class="workbase ww">
+								<a href="https://cafferry.github.io/wordsgame/">
+									<img src="img/show_img/wordgame.png" alt="">
+									<div class="workmask"></div>
+									<div class="masktopest">
+
+										<div class="workworddown">
+											<p>打字游戏
+											</p>
+										</div>
+									</div>
+									<div class="hovermask">
+										<div class="linkbox">
+											<span class="iconfont">&#xe600;</span>
+											<span class="iconfont">&#xe604;</span>
+											<span class="iconfont">&#xe605;</span>
+										</div>
+									</div>
+								</a>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+
+
+			</ul>
+		</div>
+	</div>
+	<!--第无屏-->
+	<div class="section sec5">
+		<div class="inner container">
+			<div class="sec5_content row">
+				<div class="sec5_txt col-l-12 col-m-12 col-s-12">
+					<div id="txts"></div>
+				</div>
+				<div class="infos col-l-12 col-m-12 col-s-12">
+					<p>姓名：袁飞</p>
+					<p>手机：13630237822</p>
+					<p>邮箱：<a href="mailto:caffreyY@163.com">caffreyY@163.com</a></p>
+					<p>QQ：38232789</p>
+					<p>住址：上海市浦东新区沪南路高青路</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
