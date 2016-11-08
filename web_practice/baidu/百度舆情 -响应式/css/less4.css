@@ -1,0 +1,162 @@
+/*************************引入另一个less，可以不加后缀名*************************/
+.container {
+  width: 100%;
+}
+.container:before,
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container-fuild {
+  width: 100%;
+}
+.container-fuild:before,
+.container-fuild:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container > .row {
+  width: 100%;
+}
+.container > .row:before,
+.container > .row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container-fuild > .row {
+  width: 100%;
+}
+.container-fuild > .row:before,
+.container-fuild > .row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.col-s-1 {
+  width: 8.33333333%;
+  float: left;
+}
+.col-s-2 {
+  width: 16.66666667%;
+  float: left;
+}
+.col-s-3 {
+  width: 25%;
+  float: left;
+}
+.col-s-4 {
+  width: 33.33333333%;
+  float: left;
+}
+.col-s-5 {
+  width: 41.66666667%;
+  float: left;
+}
+.col-s-6 {
+  width: 50%;
+  float: left;
+}
+.col-s-7 {
+  width: 58.33333333%;
+  float: left;
+}
+.col-s-8 {
+  width: 66.66666667%;
+  float: left;
+}
+.col-s-9 {
+  width: 75%;
+  float: left;
+}
+.col-s-10 {
+  width: 83.33333333%;
+  float: left;
+}
+.col-s-11 {
+  width: 91.66666667%;
+  float: left;
+}
+.col-s-12 {
+  width: 100%;
+  float: left;
+}
+.container > .row > .col-s-hide {
+  display: none;
+}
+.container-fuild > .row > .col-s-hide {
+  display: none;
+}
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 1000px;
+  }
+  .col-m-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .col-m-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .col-m-3 {
+    width: 25%;
+    float: left;
+  }
+  .col-m-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .col-m-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .col-m-6 {
+    width: 50%;
+    float: left;
+  }
+  .col-m-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .col-m-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .col-m-9 {
+    width: 75%;
+    float: left;
+  }
+  .col-m-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .col-m-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .col-m-12 {
+    width: 100%;
+    float: left;
+  }
+  .container > .row > .col-s-hide {
+    display: block;
+  }
+  .container > .row > .col-l-hide {
+    display: block;
+  }
+  .container > .row > .col-m-hide {
+    display: none;
+  }
+  .container-fuild > .row > .col-s-hide {
+    display: block;
+  }
+  .container-fuild > .row > .col-l-hide {
+    display: block;
+  }
+  .container-fuild > .row > .col-m-hide {
+    display: none;
+  }
+}

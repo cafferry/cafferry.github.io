@@ -1,0 +1,226 @@
+/*************************引入另一个less，可以不加后缀名*************************/
+.container {
+  width: 982px;
+}
+.container:before,
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container-fuild {
+  width: 100%;
+}
+.container-fuild:before,
+.container-fuild:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container > .row {
+  width: 100%;
+}
+.container > .row:before,
+.container > .row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container-fuild > .row {
+  width: 100%;
+}
+.container-fuild > .row:before,
+.container-fuild > .row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.col-s-1 {
+  width: 5%;
+  float: left;
+}
+.col-s-2 {
+  width: 10%;
+  float: left;
+}
+.col-s-3 {
+  width: 15%;
+  float: left;
+}
+.col-s-4 {
+  width: 20%;
+  float: left;
+}
+.col-s-5 {
+  width: 25%;
+  float: left;
+}
+.col-s-6 {
+  width: 30%;
+  float: left;
+}
+.col-s-7 {
+  width: 35%;
+  float: left;
+}
+.col-s-8 {
+  width: 40%;
+  float: left;
+}
+.col-s-9 {
+  width: 45%;
+  float: left;
+}
+.col-s-10 {
+  width: 50%;
+  float: left;
+}
+.col-s-11 {
+  width: 55%;
+  float: left;
+}
+.col-s-12 {
+  width: 60%;
+  float: left;
+}
+.col-s-13 {
+  width: 65%;
+  float: left;
+}
+.col-s-14 {
+  width: 70%;
+  float: left;
+}
+.col-s-15 {
+  width: 75%;
+  float: left;
+}
+.col-s-16 {
+  width: 80%;
+  float: left;
+}
+.col-s-17 {
+  width: 85%;
+  float: left;
+}
+.col-s-18 {
+  width: 90%;
+  float: left;
+}
+.col-s-19 {
+  width: 95%;
+  float: left;
+}
+.col-s-20 {
+  width: 100%;
+  float: left;
+}
+.container > .row > .col-s-hide {
+  display: none;
+}
+.container-fuild > .row > .col-s-hide {
+  display: none;
+}
+@media screen and (min-width: 1230px) {
+  .container {
+    width: 1230px;
+  }
+  .col-m-1 {
+    width: 5%;
+    float: left;
+  }
+  .col-m-2 {
+    width: 10%;
+    float: left;
+  }
+  .col-m-3 {
+    width: 15%;
+    float: left;
+  }
+  .col-m-4 {
+    width: 20%;
+    float: left;
+  }
+  .col-m-5 {
+    width: 25%;
+    float: left;
+  }
+  .col-m-6 {
+    width: 30%;
+    float: left;
+  }
+  .col-m-7 {
+    width: 35%;
+    float: left;
+  }
+  .col-m-8 {
+    width: 40%;
+    float: left;
+  }
+  .col-m-9 {
+    width: 45%;
+    float: left;
+  }
+  .col-m-10 {
+    width: 50%;
+    float: left;
+  }
+  .col-m-11 {
+    width: 55%;
+    float: left;
+  }
+  .col-m-12 {
+    width: 60%;
+    float: left;
+  }
+  .col-m-13 {
+    width: 65%;
+    float: left;
+  }
+  .col-m-14 {
+    width: 70%;
+    float: left;
+  }
+  .col-m-15 {
+    width: 75%;
+    float: left;
+  }
+  .col-m-16 {
+    width: 80%;
+    float: left;
+  }
+  .col-m-17 {
+    width: 85%;
+    float: left;
+  }
+  .col-m-18 {
+    width: 90%;
+    float: left;
+  }
+  .col-m-19 {
+    width: 95%;
+    float: left;
+  }
+  .col-m-20 {
+    width: 100%;
+    float: left;
+  }
+  .container > .row > .col-s-hide {
+    display: block;
+  }
+  .container > .row > .col-l-hide {
+    display: block;
+  }
+  .container > .row > .col-m-hide {
+    display: none;
+  }
+  .container-fuild > .row > .col-s-hide {
+    display: block;
+  }
+  .container-fuild > .row > .col-l-hide {
+    display: block;
+  }
+  .container-fuild > .row > .col-m-hide {
+    display: none;
+  }
+}

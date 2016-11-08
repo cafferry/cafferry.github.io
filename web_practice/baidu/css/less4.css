@@ -1,0 +1,523 @@
+/*************************引入另一个less，可以不加后缀名*************************/
+.container {
+  width: 472px;
+}
+.container:before,
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container-fuild {
+  width: 100%;
+}
+.container-fuild:before,
+.container-fuild:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container > .row {
+  width: 100%;
+}
+.container > .row:before,
+.container > .row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container-fuild > .row {
+  width: 100%;
+}
+.container-fuild > .row:before,
+.container-fuild > .row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.col-s-1 {
+  width: 2.77777778%;
+  float: left;
+}
+.col-s-2 {
+  width: 5.55555556%;
+  float: left;
+}
+.col-s-3 {
+  width: 8.33333333%;
+  float: left;
+}
+.col-s-4 {
+  width: 11.11111111%;
+  float: left;
+}
+.col-s-5 {
+  width: 13.88888889%;
+  float: left;
+}
+.col-s-6 {
+  width: 16.66666667%;
+  float: left;
+}
+.col-s-7 {
+  width: 19.44444444%;
+  float: left;
+}
+.col-s-8 {
+  width: 22.22222222%;
+  float: left;
+}
+.col-s-9 {
+  width: 25%;
+  float: left;
+}
+.col-s-10 {
+  width: 27.77777778%;
+  float: left;
+}
+.col-s-11 {
+  width: 30.55555556%;
+  float: left;
+}
+.col-s-12 {
+  width: 33.33333333%;
+  float: left;
+}
+.col-s-13 {
+  width: 36.11111111%;
+  float: left;
+}
+.col-s-14 {
+  width: 38.88888889%;
+  float: left;
+}
+.col-s-15 {
+  width: 41.66666667%;
+  float: left;
+}
+.col-s-16 {
+  width: 44.44444444%;
+  float: left;
+}
+.col-s-17 {
+  width: 47.22222222%;
+  float: left;
+}
+.col-s-18 {
+  width: 50%;
+  float: left;
+}
+.col-s-19 {
+  width: 52.77777778%;
+  float: left;
+}
+.col-s-20 {
+  width: 55.55555556%;
+  float: left;
+}
+.col-s-21 {
+  width: 58.33333333%;
+  float: left;
+}
+.col-s-22 {
+  width: 61.11111111%;
+  float: left;
+}
+.col-s-23 {
+  width: 63.88888889%;
+  float: left;
+}
+.col-s-24 {
+  width: 66.66666667%;
+  float: left;
+}
+.col-s-25 {
+  width: 69.44444444%;
+  float: left;
+}
+.col-s-26 {
+  width: 72.22222222%;
+  float: left;
+}
+.col-s-27 {
+  width: 75%;
+  float: left;
+}
+.col-s-28 {
+  width: 77.77777778%;
+  float: left;
+}
+.col-s-29 {
+  width: 80.55555556%;
+  float: left;
+}
+.col-s-30 {
+  width: 83.33333333%;
+  float: left;
+}
+.col-s-31 {
+  width: 86.11111111%;
+  float: left;
+}
+.col-s-32 {
+  width: 88.88888889%;
+  float: left;
+}
+.col-s-33 {
+  width: 91.66666667%;
+  float: left;
+}
+.col-s-34 {
+  width: 94.44444444%;
+  float: left;
+}
+.col-s-35 {
+  width: 97.22222222%;
+  float: left;
+}
+.col-s-36 {
+  width: 100%;
+  float: left;
+}
+.container > .row > .col-s-hide {
+  display: none;
+}
+.container-fuild > .row > .col-s-hide {
+  display: none;
+}
+@media screen and (min-width: 720px) {
+  .container {
+    width: 100%;
+    margin: 0 10px;
+  }
+  .col-m-1 {
+    width: 2.77777778%;
+    float: left;
+  }
+  .col-m-2 {
+    width: 5.55555556%;
+    float: left;
+  }
+  .col-m-3 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .col-m-4 {
+    width: 11.11111111%;
+    float: left;
+  }
+  .col-m-5 {
+    width: 13.88888889%;
+    float: left;
+  }
+  .col-m-6 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .col-m-7 {
+    width: 19.44444444%;
+    float: left;
+  }
+  .col-m-8 {
+    width: 22.22222222%;
+    float: left;
+  }
+  .col-m-9 {
+    width: 25%;
+    float: left;
+  }
+  .col-m-10 {
+    width: 27.77777778%;
+    float: left;
+  }
+  .col-m-11 {
+    width: 30.55555556%;
+    float: left;
+  }
+  .col-m-12 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .col-m-13 {
+    width: 36.11111111%;
+    float: left;
+  }
+  .col-m-14 {
+    width: 38.88888889%;
+    float: left;
+  }
+  .col-m-15 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .col-m-16 {
+    width: 44.44444444%;
+    float: left;
+  }
+  .col-m-17 {
+    width: 47.22222222%;
+    float: left;
+  }
+  .col-m-18 {
+    width: 50%;
+    float: left;
+  }
+  .col-m-19 {
+    width: 52.77777778%;
+    float: left;
+  }
+  .col-m-20 {
+    width: 55.55555556%;
+    float: left;
+  }
+  .col-m-21 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .col-m-22 {
+    width: 61.11111111%;
+    float: left;
+  }
+  .col-m-23 {
+    width: 63.88888889%;
+    float: left;
+  }
+  .col-m-24 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .col-m-25 {
+    width: 69.44444444%;
+    float: left;
+  }
+  .col-m-26 {
+    width: 72.22222222%;
+    float: left;
+  }
+  .col-m-27 {
+    width: 75%;
+    float: left;
+  }
+  .col-m-28 {
+    width: 77.77777778%;
+    float: left;
+  }
+  .col-m-29 {
+    width: 80.55555556%;
+    float: left;
+  }
+  .col-m-30 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .col-m-31 {
+    width: 86.11111111%;
+    float: left;
+  }
+  .col-m-32 {
+    width: 88.88888889%;
+    float: left;
+  }
+  .col-m-33 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .col-m-34 {
+    width: 94.44444444%;
+    float: left;
+  }
+  .col-m-35 {
+    width: 97.22222222%;
+    float: left;
+  }
+  .col-m-36 {
+    width: 100%;
+    float: left;
+  }
+  .container > .row > .col-s-hide {
+    display: block;
+  }
+  .container > .row > .col-l-hide {
+    display: block;
+  }
+  .container > .row > .col-m-hide {
+    display: none;
+  }
+  .container-fuild > .row > .col-s-hide {
+    display: block;
+  }
+  .container-fuild > .row > .col-l-hide {
+    display: block;
+  }
+  .container-fuild > .row > .col-m-hide {
+    display: none;
+  }
+}
+@media screen and (min-width: 1056px) {
+  .container {
+    width: 1056px;
+    margin: 0 auto;
+  }
+  .col-l-1 {
+    width: 2.77777778%;
+    float: left;
+  }
+  .col-l-2 {
+    width: 5.55555556%;
+    float: left;
+  }
+  .col-l-3 {
+    width: 8.33333333%;
+    float: left;
+  }
+  .col-l-4 {
+    width: 11.11111111%;
+    float: left;
+  }
+  .col-l-5 {
+    width: 13.88888889%;
+    float: left;
+  }
+  .col-l-6 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .col-l-7 {
+    width: 19.44444444%;
+    float: left;
+  }
+  .col-l-8 {
+    width: 22.22222222%;
+    float: left;
+  }
+  .col-l-9 {
+    width: 25%;
+    float: left;
+  }
+  .col-l-10 {
+    width: 27.77777778%;
+    float: left;
+  }
+  .col-l-11 {
+    width: 30.55555556%;
+    float: left;
+  }
+  .col-l-12 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .col-l-13 {
+    width: 36.11111111%;
+    float: left;
+  }
+  .col-l-14 {
+    width: 38.88888889%;
+    float: left;
+  }
+  .col-l-15 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .col-l-16 {
+    width: 44.44444444%;
+    float: left;
+  }
+  .col-l-17 {
+    width: 47.22222222%;
+    float: left;
+  }
+  .col-l-18 {
+    width: 50%;
+    float: left;
+  }
+  .col-l-19 {
+    width: 52.77777778%;
+    float: left;
+  }
+  .col-l-20 {
+    width: 55.55555556%;
+    float: left;
+  }
+  .col-l-21 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .col-l-22 {
+    width: 61.11111111%;
+    float: left;
+  }
+  .col-l-23 {
+    width: 63.88888889%;
+    float: left;
+  }
+  .col-l-24 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .col-l-25 {
+    width: 69.44444444%;
+    float: left;
+  }
+  .col-l-26 {
+    width: 72.22222222%;
+    float: left;
+  }
+  .col-l-27 {
+    width: 75%;
+    float: left;
+  }
+  .col-l-28 {
+    width: 77.77777778%;
+    float: left;
+  }
+  .col-l-29 {
+    width: 80.55555556%;
+    float: left;
+  }
+  .col-l-30 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .col-l-31 {
+    width: 86.11111111%;
+    float: left;
+  }
+  .col-l-32 {
+    width: 88.88888889%;
+    float: left;
+  }
+  .col-l-33 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .col-l-34 {
+    width: 94.44444444%;
+    float: left;
+  }
+  .col-l-35 {
+    width: 97.22222222%;
+    float: left;
+  }
+  .col-l-36 {
+    width: 100%;
+    float: left;
+  }
+  .container > .row > .col-s-hide {
+    display: block;
+  }
+  .container > .row > .col-l-hide {
+    display: none;
+  }
+  .container > .row > .col-m-hide {
+    display: block;
+  }
+  .container-fuild > .row > .col-s-hide {
+    display: none;
+  }
+  .container-fuild > .row > .col-l-hide {
+    display: block;
+  }
+  .container-fuild > .row > .col-m-hide {
+    display: block;
+  }
+}

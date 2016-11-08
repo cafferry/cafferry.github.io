@@ -1,0 +1,94 @@
+@import "less2.less";    /*************************引入另一个less，可以不加后缀名*************************/
+.container{
+  &{
+    width:@num1*1px-248px;
+    .clearfix;
+  }
+  &-fuild{
+    width:100%;
+    .clearfix;
+  }
+  &>.row{
+    width:100%;
+    .clearfix;
+  }
+  &-fuild>.row{
+    width:100%;
+    .clearfix;
+  }
+}
+.loop(@type:s,@i:1) when (@i<=@colNum){
+.col-@{type}-@{i}{
+    width:@i/@colNum*100%;
+    float:left;
+  }
+
+  .loop(@type,@i+1)
+}
+.loop();
+
+.container>.row>.col-s-hide{
+  display: none;
+}
+.container-fuild>.row>.col-s-hide{
+  display: none;
+}
+
+
+@media screen and (min-width:@num1){
+  .container{
+    width:100%;
+    margin: 0 10px;
+  }
+  .loop(m);
+.container>.row>.col-s-hide{
+  display: block;
+}
+.container>.row>.col-l-hide{
+  display: block;
+}
+  .container>.row>.col-m-hide{
+    display: none;
+  }
+
+  .container-fuild>.row>.col-s-hide{
+    display: block;
+  }
+
+  .container-fuild>.row>.col-l-hide{
+    display: block;
+  }
+  .container-fuild>.row>.col-m-hide{
+    display: none;
+  }
+}
+
+
+@media screen and (min-width:@num2){
+  .container{
+    width:@num2;
+    margin: 0 auto;
+  }
+  .loop(l);
+  .container>.row>.col-s-hide{
+    display: block;
+  }
+
+  .container>.row>.col-l-hide{
+    display: none;
+  }
+  .container>.row>.col-m-hide{
+    display: block;
+  }
+
+  .container-fuild>.row>.col-s-hide{
+    display: none;
+  }
+
+  .container-fuild>.row>.col-l-hide{
+    display: block;
+  }
+  .container-fuild>.row>.col-m-hide{
+    display: block;
+  }
+}

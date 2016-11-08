@@ -1,0 +1,609 @@
+html,body{
+    margin: 0;
+    padding:0;
+    height:100%;
+    overflow: hidden;
+    font: 14px/1.5 "Microsoft YaHei","微软雅黑",Helvetica,sans-serif;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.fullpage{
+    /*width: auto;*/
+    height:100%;
+    /*overflow: hidden;*/
+}
+.page{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    position: relative;
+    transition: margin 3s ease;
+}
+.page:nth-child(1){
+    background-image: url(../img/ban1.jpg);
+}
+.page:nth-child(2){
+    background-image: url(../img/ban2.jpg);
+}
+.page:nth-child(3){
+    background-image: url(../img/ban3.jpg);
+}
+.page:nth-child(4){
+    background-image: url(../img/ban4.jpg);
+}
+/*****************************************************page1*****************************************************/
+.inner_box{
+    width:1000px;
+    height:100%;
+    /*background: pink;*/
+    position: relative;
+    margin: 0 auto;
+}
+.cloud:nth-child(1){
+    animation: cloudmove 100s linear 0s normal none infinite running ;
+    background: rgba(0, 0, 0, 0) url("../img/cloud1.png") ;
+    height: 1000px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.cloud:nth-child(2){
+    animation: cloudmove 280s linear 0s normal none infinite running ;
+    background: rgba(0, 0, 0, 0) url("../img/cloud2.png")  ;
+    height: 400px;
+    left: 0;
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    /*z-index: 999;*/
+}
+.cloud:nth-child(3){
+    animation:cloudmove 600s linear 0s normal none infinite running ;
+    background: rgba(0, 0, 0, 0) url("../img/cloud3.png") ;
+    bottom: 0;
+    height: 400px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+@keyframes  cloudmove{
+    100%{
+    transform:translateX(-1000px)
+    }
+}
+.text{
+    width:501px;
+    height:158px;
+    position: absolute;
+    top:210px;
+    left:0;
+    background: url(../img/text1.png);
+}
+.flight{
+    width:119px;
+    height:78px;
+    background: url(../img/flight.png);
+    position: absolute;
+    left: 300px;
+    top:-10px;
+    animation:plane 1s both alternate infinite;
+}
+@keyframes plane{
+    100%{
+        transform:translateY(-20px);
+    }
+}
+
+/*****************************************************login*****************************************************/
+.login{
+    width: 340px;
+    height:267px;
+    background: yellow;
+    position: absolute;
+    top:200px;
+    right:0;
+    border-radius: 8px;
+    background: #4EBFFC;
+    padding-top: 26px;
+}
+.login_info{
+    width: 300px;
+    height:178px;
+    padding: 0 20px;
+}
+.account{
+    width: 299px;
+    height:40px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+.account span{
+    display: block;
+    float: left;
+    width:14px;
+    height:14px;
+    margin: 12px 3px 0 10px;
+    background: url(../img/icons.png) -124px -12px;
+}
+.account input{
+    float: right;
+    width: 252px;
+    height:20px;
+    padding: 9px;
+    border: 0;
+}
+.password{
+    width: 299px;
+    height:40px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+.password span{
+    display: block;
+    float: left;
+    width:14px;
+    height:14px;
+    margin: 12px 3px 0 10px;
+    background: url(../img/icons.png)  -140px -12px;
+}
+.password input{
+    float: right;
+    width: 252px;
+    height:20px;
+    padding: 9px;
+    border: 0;
+}
+.taken{
+    width: 299px;
+    height:40px;
+    margin-bottom: 20px;
+}
+.taken input{
+    float: left;
+    width: 120px;
+    height:20px;
+    padding: 9px;
+    border: 0;
+}
+.checknum{
+    float: left;
+    width: 99px;
+    height:39px;
+    margin-left: 10px;
+    background: red;
+}
+.taken a{
+    display: block;
+    float: left;
+    width: 36px;
+    height:18px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.login_action{
+    width: 300px;
+    height:88px;
+    padding: 0 20px;
+}
+#denglu{
+    width: 300px;
+    height:37px;
+    padding:0 10px;
+    margin-top: 12px;
+    border: 0;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    background:  #ffd850;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 35px;
+    outline: medium none;
+    /*padding: 0 10px;*/
+    /*text-align: center;*/
+    /*vertical-align: middle;*/
+}
+.other{
+    width: 300px;
+    height:19px;
+    margin-top: 12px;
+}
+.other span{
+     display: block;
+     width: 15px;
+     height:17px;
+     background: url(../img/icons.png) no-repeat scroll -203px -75px;
+     float: left;
+    margin: 2px 4px 0 0 ;
+ }
+.other a:nth-child(2){
+    font-size:12px;
+     float: left;
+ }
+.other a:nth-child(3){
+    font-size:12px;
+    float: right;
+}
+.other a:hover{
+    text-decoration: underline;
+}
+/**************************************************************************/
+.boat{
+    width:242px;
+    height:228px;
+    position: absolute;
+    bottom: 90px;
+    left:126px;
+    background: url(../img/boat.png);
+    z-index: 1;
+    transform:translateX(-30px);
+    animation:boat 1s both;
+}
+@keyframes boat{
+    100%{
+        /*transform:translateX(0px);*/
+        transform:translateX(0);
+    }
+}
+.ice1{
+    width: 265px;
+    height:175px;
+    background: url(../img/ice1.png);
+    position: absolute;
+    bottom: 1px;
+    left: -205px;
+}
+.ice2{
+    width: 63px;
+    height:78px;
+    background: url(../img/ice2.png);
+    position: absolute;
+    bottom: 61px;
+    left: 650px;
+}
+.ice3{
+    width: 260px;
+    height:173px;
+    background: url(../img/ice3.png);
+    position: absolute;
+    bottom: 0;
+    right: -205px;
+}
+.arrow{
+    width: 30px;
+    height:26px;
+    background: url(../img/arrow.png);
+    position: absolute;
+    left: 50%;
+    bottom: 66px;
+    margin-left: -15px;
+    z-index: 1;
+    animation:ship 0.5s both alternate infinite;
+    opacity: 0.7;
+}
+@keyframes ship{
+    100%{
+        transform:translatey(-10px);
+        opacity: 1;
+    }
+}
+.follow_head{
+    width: 100%;
+    height:126px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url(../img/follow_head.jpg);
+    opacity: 0.7;
+}
+/******************************page-----END**********************************************/
+
+/******************************page2****************************************************/
+.text2{
+    width:500px;
+    height:126px;
+    position: absolute;
+    left: 0;
+    top:300px;
+    /*animation:text2 2s both alternate;*/
+    transition: all 3s ease;
+    transform:translateX(0px);
+    opacity: 0;
+}
+/*@keyframes text2{*/
+    /*100%{*/
+        /*transform:translateX(20px);*/
+        /*opacity: 1;*/
+    /*}*/
+/*}*/
+.text2 .left{
+    width:66px;
+    height:126px;
+    background: url(../img/lingxian.png);
+    animation:zhuan 2s both infinite;
+}
+@keyframes zhuan{
+    50%{
+        transform:rotateY(0deg);
+    }
+    100%{
+        transform:rotateY(360deg);
+    }
+}
+.text2 .left{
+    float: left;
+}
+.text2 .right{
+    float: left;
+}
+.text2 .right{
+    margin-left: 20px;
+    /*width: 414px;*/
+    height:118px;
+    margin-top: 8px;
+}
+.text2 .right .top{
+    width:414px;
+    height:48px;
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 48px;
+    margin-bottom: 6px;
+
+}
+.text2 .right .down{
+    font-size: 19px;
+    letter-spacing: 1px;
+    line-height: 32px;
+    opacity: 0.8;
+}
+.tree{
+    width: 444px;
+    height: 427px;
+    position: absolute;
+    top:200px;
+    right: 0;
+    background: url(../img/tree.png);
+}
+.blocks1{
+    width: 44px;
+    height:44px;
+    background: #35b568;
+    position: absolute;
+    bottom:0;
+    left:70px;
+}
+.blocks2{
+    width: 88px;
+    height:88px;
+    background: #4ac179;
+    position: absolute;
+    bottom:0;
+    left:157px;
+}
+.blocks3{
+    width: 44px;
+    height:44px;
+    background: #8ae75a;
+    position: absolute;
+    bottom:0;
+    left:245px;
+}
+.blocks4{
+    width: 44px;
+    height:44px;
+    background: #8ae75a;
+    position: absolute;
+    bottom:0;
+    left:625px;
+}.blocks5{
+     width: 44px;
+     height:44px;
+     background: #4ac179;
+     position: absolute;
+     bottom:0;
+     left:715px;
+ }
+/******************************page2-----END**********************************************/
+
+/******************************page3****************************************************/
+.text3{
+    z-index: 2;
+}
+.text3 .left{
+    background: url(../img/quanmian.png);
+}
+.rentou{
+    width:444px;
+    height:330px;
+    position: absolute;
+    top:300px;
+    right:0;
+    background: url(../img/rentou.png);
+}
+.blocks3-1{
+    width: 88px;
+    height:88px;
+    background: #33bb9a;
+    position: absolute;
+    left: 70px;
+    top: 20px;
+}
+.blocks3-2{
+    width: 88px;
+    height:88px;
+    background:#29a2b8 ;
+    position: absolute;
+    left: -18px;
+    top: 108px;
+}
+.blocks3-3{
+    width: 88px;
+    height:88px;
+    background:#60cf6e ;
+    position: absolute;
+    left: 158px;
+    top: 108px;
+}
+.blocks3-4{
+    width: 176px;
+    height:176px;
+    background:url(../img/block2-4.jpg) ;
+    position: absolute;
+    left: 70px;
+    top: 196px;
+}
+.blocks3-5{
+    width: 88px;
+    height:88px;
+    background:#33bb9a ;
+    position: absolute;
+    left: 246px;
+    top: 196px;
+}
+.follow_head3{
+    width: 100%;
+    height:138px;
+    background: url(../img/cao.png);
+    position: absolute;
+    bottom: 0;
+    left:0;
+}
+/******************************page3-----END**********************************************/
+
+/******************************page4****************************************************/
+.text4{
+    z-index:2;
+}
+.text4 .left{
+    background: url(../img/zhuanye.png);
+}
+.blocks4-1{
+    width: 275px;
+    height:245px;
+    background:url(../img/yuan.png) ;
+    position: absolute;
+    left: -36px;
+    top: 241px;
+}
+.zhuxingtu{
+    width: 603px;
+    height:361px;
+    position: absolute;
+    top:270px;
+    right:80px;
+    background: url(../img/zhuxingtu.png);
+}
+.follow_head4{
+    height:80px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+    line-height: 80px;
+    text-align: center;
+}
+.tree,.rentou,.zhuxingtu{
+    transform:translateX(0px);
+    opacity: 0;
+    /*animation:tree 1s both alternate;*/
+    transition: all 3s ease;
+}
+
+/*@keyframes tree{*/
+    /*100%{*/
+        /*transform:translateX(-30px);*/
+        /*opacity: 1;*/
+    /*}*/
+/*}*/
+/******************************page4-----END**********************************************/
+
+/******************************btn****************************************************/
+.btn_box{
+    width: 28px;
+    height:73px;
+    position: fixed;
+    right: 20px;
+    top:50%;
+    margin-top: -46px;
+}
+.btn{
+    width: 8px;
+    height:8px;
+    margin:   6px auto;
+    border:1px solid #000;
+    border-radius: 50%;
+}
+.btn:nth-of-type(1){
+    background: #000;
+}
+/******************************btn-----END**********************************************/
+
+/******************************nav****************************************************/
+.navbox{
+    width: 100%;
+    height:60px;
+    position: fixed;
+    left: 0;
+    top:0;
+    background:  #168bd8;
+}
+header{
+    width: 1000px;
+    height:100%;
+    margin: 0 auto;
+}
+header .logo{
+    width: 120px;
+    height:40px;
+    float: left;
+    margin-top: 10px;
+    background: url(../img/logo.png);
+}
+header .left{
+    width: 360px;
+    height:100%;
+    float: left;
+    padding-left: 60px;
+    box-sizing: border-box;
+}
+header .right{
+    width: 327px;
+    height:29px;
+    margin-top: 25px;
+    float: right;
+}
+header .left a{
+    display: block;
+    width: 100px;
+    height:28px;
+    padding-top: 32px;
+    float: left;
+    text-align: center;
+}
+header .right a{
+    display: block;
+    float: left;
+    padding: 0 10px;
+    line-height:29px;
+    font-size: 12px;;
+}
+header .right a:nth-child(4){
+    color: #ffda28;
+}
+header .right a i{
+    float: right;
+    width: 32px;
+    height:28px;
+    background: url(../img/logo.png) -88px -154px;
+}
+
+
