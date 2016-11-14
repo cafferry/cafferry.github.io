@@ -1,7 +1,7 @@
 
 $(function(){
     welcome()
-    $(document).scrollTop(0)
+    $("html,body").scrollTop(0)
     var cw=document.documentElement.clientWidth;
     var ch=document.documentElement.clientHeight;
     var flag=true
@@ -40,23 +40,16 @@ $(function(){
     })
 //切换效果
  $('#nav #menu li ').click(function () {
-        var obj=document.body.scrollTop?document.body:document.documentElement;
         var index=$(this).index()
         var top=$('.section')[index].offsetTop
-        $(obj).animate({scrollTop:top},function () {
-            $('#nav #menu li span').css({background:'',color:'#fff'}).eq(index).css({background:'#FFFF00',color:'#000'})
-        })
-
+         $("html,body").animate({scrollTop:top})
     })
 
 if($('#nav #menu2')){
     $('#nav #menu2 li').click(function () {
-        var obj=document.body.scrollTop?document.body:document.documentElement;
         var index=$(this).index()
         var top=$('.section')[index].offsetTop
-        $(obj).animate({scrollTop:top},function () {
-            $('#nav #menu li span').css({background:'',color:'#fff'}).eq(index).css({background:'#FFFF00',color:'#000'})
-        })
+         $("html,body").animate({scrollTop:top})
     })
 }
 //滚轮切换
