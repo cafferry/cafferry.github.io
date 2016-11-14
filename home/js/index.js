@@ -1,19 +1,15 @@
 
 $(function(){
+    welcome()
     $(document).scrollTop(0)
     var cw=document.documentElement.clientWidth;
+    var ch=document.documentElement.clientHeight;
     var flag=true
     var flag2=true;
+
     loadAnimate()
-    // if($(document).scrollTop()>500){
-    //     if(flag){
-    //         alert(1)
-    //         flag=false
-    //     }
-    // }
-    second()
     third()
-    fifth()
+
 
     var kaiguan=true
     $("#down_menu").click(function(){
@@ -44,55 +40,62 @@ $(function(){
     })
 //切换效果
  $('#nav #menu li ').click(function () {
+        var obj=document.body.scrollTop?document.body:document.documentElement;
         var index=$(this).index()
         var top=$('.section')[index].offsetTop
-        $(document).scrollTop(top)
-        $('#nav #menu li span').css({background:'',color:'#fff'}).eq(index).css({background:'#FFFF00',color:'#000'})
+        $(obj).animate({scrollTop:top},function () {
+            $('#nav #menu li span').css({background:'',color:'#fff'}).eq(index).css({background:'#FFFF00',color:'#000'})
+        })
+
     })
-    if($('#nav #menu2')){
-        $('#nav #menu2 li').click(function () {
-            var index=$(this).index()
-            var top=$('.section')[index].offsetTop
-            $(document).scrollTop(top)
-            $('#nav #menu2 li span').css({background:'',color:'#fff'}).eq(index).css({color:'#FFFF00'})
-        })
-    }
 
+if($('#nav #menu2')){
+    $('#nav #menu2 li').click(function () {
+        var obj=document.body.scrollTop?document.body:document.documentElement;
+        var index=$(this).index()
+        var top=$('.section')[index].offsetTop
+        $(obj).animate({scrollTop:top},function () {
+            $('#nav #menu li span').css({background:'',color:'#fff'}).eq(index).css({background:'#FFFF00',color:'#000'})
+        })
+    })
+}
+//滚轮切换
     var sec=$('.section')
-    document.onscroll=function(){
+    $(window).scroll(function(){
         var tops=document.documentElement.scrollTop||document.body.scrollTop;
-        top=tops
+        // console.log(sec[4].offsetTop)       //3500
         for(var i=0;i<sec.length;i++){
-            if(tops>=sec[i].offsetTop&&tops<sec[i+1].offsetTop){
-                if($('#menu2')){
-                    $('#nav #menu2 li span').css({background:'',color:'#fff'}).eq(i).css({color:'#FFFF00'})
+            if(sec[i+1]){
+                if((tops>=sec[i].offsetTop-150)&&tops<sec[i+1].offsetTop){
+                    if($('#menu2')){
+                        $('#nav #menu2 li span').css({background:'',color:'#fff'}).eq(i).css({color:'#FFFF00'})
+                    }
+                    $('#nav #menu li span').css({background:'',color:'#fff'}).eq(i).css({background:'#FFFF00',color:'#000'})
                 }
-                $('#nav #menu li span').css({background:'',color:'#fff'}).eq(i).css({background:'#FFFF00',color:'#000'})
             }
+
         }
+        //二层 五层  动画 开启
+        // console.log(oDis)
+        if((tops>=sec[1].offsetTop-150)&&tops<sec[2].offsetTop){
+            if(flag){
+                second()
+            }
+            flag=false
+        }
+        if((tops>=sec[4].offsetTop-300)){
+            if(flag2){
+                fifth()
+            }
+            flag2=false
 
-    }
-
-
-
-
-
-    function welcome(){
-        $(".jinru").css({opacity:1})
-        $(".range").animate({width:"100%"},2000,function(){
-            $(".huanying").animate({opacity:0},function(){
-                $(".huanying").css({display:"none"})
-            })
-        })
-        setInterval(function(){
-            var baifenbi=Math.round(parseInt($(".range").css("width"))/5)+"%"
-            $(".baifen").html(baifenbi)
-        },60)
-    }
-    welcome()
-
-
-
+            //第五层导航颜色问题
+            if($('#menu2')){
+                $('#nav #menu2 li span').css({background:'',color:'#fff'}).eq(4).css({color:'#FFFF00'})
+            }
+            $('#nav #menu li span').css({background:'',color:'#fff'}).eq(4).css({background:'#FFFF00',color:'#000'})
+        }
+    });
 // 方位判断函数
     function getDicration(e,obj){
         var x=e.offsetX
@@ -117,6 +120,7 @@ $(function(){
         }
         return b
     }
+
 // 作品上的信息的显示
     function workwordsshow(m){  /*第一件事*/
         // $(".lineup").eq(m).addClass("active")
@@ -169,23 +173,44 @@ $(function(){
     },function(){
         $(this).removeClass("active")
     })
-// 检查重复
-    function checkrepeat(obj,arr){
-        for(var i=0;i<arr.length;i++){
-            if(arr[i]==obj){
-                return false
-            }
+// // 检查重复
+//     function checkrepeat(obj,arr){
+//         for(var i=0;i<arr.length;i++){
+//             if(arr[i]==obj){
+//                 return false
+//             }
+//         }
+//         return true
+//     }
+//     function del(colornow,a,b){
+//         for(var i=0;i<colornow.length;i++){
+//             if(colornow[i]==a){
+//                 colornow.splice(i,1)
+//                 colornow.push(b)
+//                 return
+//             }
+//         }
+//     }
+    // 去除浏览器默认行为
+    document.onmousedown=function (e) {
+        var ev=e||window.event;
+        ev.preventDefault()
+        document.onmousemove=function (e) {
+            var ev=e||window.event;
+            ev.preventDefault()
         }
-        return true
+    };
+//欢迎界面
+    function welcome(){
+        $(".jinru").css({opacity:1})
+        $(".range").animate({width:"100%"},2000,function(){
+            $(".huanying").animate({opacity:0},function(){
+                $(".huanying").css({display:"none"})
+            })
+        })
+        setInterval(function(){
+            var baifenbi=Math.round(parseInt($(".range").css("width"))/5)+"%"
+            $(".baifen").html(baifenbi)
+        },60)
     }
-    function del(colornow,a,b){
-        for(var i=0;i<colornow.length;i++){
-            if(colornow[i]==a){
-                colornow.splice(i,1)
-                colornow.push(b)
-                return
-            }
-        }
-    }
-
 })
